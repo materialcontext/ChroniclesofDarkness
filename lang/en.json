@@ -229,6 +229,8 @@
   "MTA.Persistent": "Persistent",
   "MTA.Environmental": "Environmental",
   "MTA.Legacy": "Legacy",
+  "MTA.Nature": "Nature",
+  "MTA.Demeanor": "Demeanor",
   "MTA.Impression": "Impression",
   "MTA.Doors": "Doors",
   "MTA.Penalty": "Penalty",

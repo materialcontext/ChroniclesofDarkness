@@ -16,8 +16,8 @@
     "maximum": "11"
   },
   "url": "https://gitlab.com/MarlQ/mta",
-  "manifest": "https://gitlab.com/MarlQ/mta/-/raw/master/system.json",
-  "download": "https://gitlab.com/MarlQ/mta/-/archive/0.12.2/mta-0.12.2.zip",
+  "manifest": "https://github.com/materialcontext/ChroniclesofDarkness/releases/download/v1.0.0/system.json",
+  "download": "https://github.com/materialcontext/ChroniclesofDarkness/releases/download/v1.0.0/system.zip",
   "changelog": "https://gitlab.com/MarlQ/mta/-/releases/0.12.2",
   "readme": "https://gitlab.com/MarlQ/mta/-/blob/master/README.md",
   "bugs": "https://gitlab.com/MarlQ/mta/-/issues",
