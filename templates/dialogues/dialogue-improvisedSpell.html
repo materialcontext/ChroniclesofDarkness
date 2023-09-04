@@ -36,6 +36,14 @@
           </select>
           <label class="wide small"> Changing the primary factor costs 1 Reach. </label>
         </div>
+        <div class="form-line">
+          <label> Ded. magical tool </label>
+          <label class="checkBox">
+            <input object.data-dtype="Boolean" name="object.paradox.magical_tool_used" type="checkbox" {{checked object.paradox.magical_tool_used}}>
+            <span></span>
+          </label>
+        </div>
+        <div class="form-line">
 <!-- 
         <div class="form-line">
           <label> Yantra Dice </label> <input name="object.yantraBonus" type="number" data-dtype="Number" value="{{object.yantraBonus}}" />
@@ -107,14 +115,6 @@
         <div class="form-line">
           <label> Mana spent </label> <input name="object.paradox.mana_spent" type="number" data-dtype="Number" value="{{object.paradox.mana_spent}}" min="0" />
         </div>
-        <div class="form-line">
-          <label> Ded. magical tool </label>
-          <label class="checkBox">
-            <input object.data-dtype="Boolean" name="object.paradox.magical_tool_used" type="checkbox" {{checked object.paradox.magical_tool_used}}>
-            <span></span>
-          </label>
-        </div>
-        <div class="form-line">
           <label> Paradox Mod. </label> <input name="object.paradox.bonus" type="number" data-dtype="Number" value="{{object.paradox.bonus}}" />
         </div>
 

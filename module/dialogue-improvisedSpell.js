@@ -134,8 +134,11 @@ export class ImprovisedSpellDialogue extends FormApplication  {
     data.scalePenalty = this._calculateFactorPenalty("scale", false,arcanum.final,objectData);
     data.castingTimePenalty = this._calculateCastingTimePenalty(arcanum.final,objectData,data);
 
+    //Calculate bonus for dedicated yantra
+    let magicalToolBonus = objectData.paradox.magical_tool_used ? 1 : 0;
+
     // Calculate spellcasting dice pool
-    data.yantraBonusFinal = Math.min(5, objectData.yantraBonus - data.potencyPenalty - data.durationPenalty - data.scalePenalty);
+    data.yantraBonusFinal = Math.min(5, objectData.yantraBonus + magicalToolBonus - data.potencyPenalty - data.durationPenalty - data.scalePenalty);
 
     objectData.woundPenalty = this.actor.getWoundPenalties();
 
@@ -153,7 +156,7 @@ export class ImprovisedSpellDialogue extends FormApplication  {
     if(objectData.isBefouled) paradoxReachBonus += Math.floor((actorData.mage_traits.gnosis.final+1) / 2);
     let paradoxSleeperBonus = objectData.paradox.sleeper_witnesses === "None" ? 0 : 1;
     let paradoxInuredBonus = objectData.isInured ? 2 : 0;
-    let paradoxToolPenalty = objectData.paradox.magical_tool_used ? 2 : 0;
+    // let paradoxToolPenalty = objectData.paradox.magical_tool_used ? 2 : 0;
 
     objectData.paradox.value = Math.max(0,objectData.paradox.previous_rolls + paradoxReachBonus + paradoxSleeperBonus + paradoxInuredBonus + objectData.paradox.bonus - paradoxToolPenalty - objectData.paradox.mana_spent);
     if(objectData.paradox.bonus>=0) {
