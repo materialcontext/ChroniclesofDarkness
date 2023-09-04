@@ -156,6 +156,7 @@ export class ImprovisedSpellDialogue extends FormApplication  {
     if(objectData.isBefouled) paradoxReachBonus += Math.floor((actorData.mage_traits.gnosis.final+1) / 2);
     let paradoxSleeperBonus = objectData.paradox.sleeper_witnesses === "None" ? 0 : 1;
     let paradoxInuredBonus = objectData.isInured ? 2 : 0;
+    let paradoxToolPenalty = 0;
     // let paradoxToolPenalty = objectData.paradox.magical_tool_used ? 2 : 0;
 
     objectData.paradox.value = Math.max(0,objectData.paradox.previous_rolls + paradoxReachBonus + paradoxSleeperBonus + paradoxInuredBonus + objectData.paradox.bonus - paradoxToolPenalty - objectData.paradox.mana_spent);
